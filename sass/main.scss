@@ -1,0 +1,23 @@
+@import './utils/variables';
+@import './utils/placeholder';
+@import './utils/mixin';
+
+@import './base/all-styles';
+
+/////index.html
+@import './components/page-header';
+@import './components/logo';
+@import './components/navigation';
+@import './components/contacts';
+
+@import './components/hero';
+@import './components/modal';
+@import './components/features';
+@import './components/_our-works';
+@import './components/_our-comand';
+@import './components/clients';
+@import './components/footer';
+
+/////Portfolio.html
+@import './components/filter-buttons';
+@import './components/gallery';

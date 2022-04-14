@@ -1,0 +1,37 @@
+.section--text-align {
+  text-align: center;
+}
+
+.clients {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.clients__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 92px;
+  border: 1px solid $logo-color;
+  border-radius: 4px;
+  color: $logo-color;
+
+  transition: color 250ms $transition-timing-function, border 250ms $transition-timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    border: 1px solid $accent-color;
+  }
+}
+
+.clients__img {
+  fill: currentColor;
+}

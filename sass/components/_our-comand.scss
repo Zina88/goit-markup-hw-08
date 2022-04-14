@@ -1,0 +1,72 @@
+.section--other-bgc {
+  background-color: $button-bgc;
+}
+
+.comand {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.comand__items {
+  margin-right: 30px;
+  background-color: $white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.avatar {
+  padding: 30px 32px;
+}
+
+.avatar__title {
+  text-align: center;
+  margin-bottom: 10px;
+  color: $title-text-color;
+  font-weight: $font-weight-500;
+  font-size: $font-size-16;
+  line-height: $line-height-119;
+  letter-spacing: 0.03em;
+}
+
+.avatar__text {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: $line-height-119;
+  letter-spacing: 0.03em;
+}
+
+.social {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social__link {
+  @include centerFlex();
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: $logo-color;
+
+  transition: background-color 250ms $transition-timing-function,
+    color 250ms $transition-timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $white-color;
+  }
+}
+.social__icon {
+  fill: currentColor;
+}
