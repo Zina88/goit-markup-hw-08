@@ -143,7 +143,7 @@ background-color: transparent;
 }
 
 .menu-container {
-    background-color: rgb(234, 229, 253);
+    background-color: $white-color;
     padding: 20px;
     font-size: 20px;
     height: 100px;
@@ -162,7 +162,7 @@ background-color: transparent;
       }
     }
     
-    @media screen and(min-width: 768px) {
+    @media screen and(min-width: $tablet) {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -172,9 +172,9 @@ background-color: transparent;
 
 .contacts {
   @media screen and(max-width: 767px) {
-display: inline-flex;
-flex-wrap: wrap;
-}
+    display: inline-flex;
+    flex-wrap: wrap;
+    }
 }
 
 
@@ -249,9 +249,7 @@ flex-wrap: wrap;
     line-height: $line-height-122;
     
     letter-spacing: 0.02em;
-    color: $accent-color;
-
- 
-}
+    color: $accent-color; 
+  }
 }
 
