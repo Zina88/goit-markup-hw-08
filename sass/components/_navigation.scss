@@ -7,11 +7,11 @@
   @media screen and(max-width: 767px){
     display: flex;
     justify-content: space-between;
+    padding: 16px 15px;
   }
 }
 
 .site-nav {
-  // display: flex;
 position: relative;
 
   @media screen and(max-width: 767px){
@@ -129,15 +129,18 @@ background-color: transparent;
 }
 }
 
-.menu-icon {}
-
-.icon-menu {}
-
-.icon-close {
-  z-index: 999;
+.menu-icon {
+  margin-right: 15px;
+  // margin-top: 10px;
 }
 
-.nav {}
+.icon-menu {
+  z-index: 2;
+}
+
+.icon-close {
+  z-index: 1;
+}
 
 .menu-container {
     background-color: rgb(234, 229, 253);
@@ -148,7 +151,7 @@ background-color: transparent;
     @media screen and(max-width: 767px) {
       display: none;
       position: absolute;
-      top:10%;
+      top: 0;
       left: 0;
       width: 100%;
       height: 100%;
@@ -167,23 +170,55 @@ background-color: transparent;
     }
 }
 
-.site-nav {
-
+.contacts {
+  @media screen and(max-width: 767px) {
+display: inline-flex;
+flex-wrap: wrap;
+}
 }
 
-.site-nav__item {}
 
-.site-nav__link {}
+.contacts__item:nth-child(1) {
+  @media screen and(max-width: 767px){
+     order: 2;
+     margin-bottom: 32px;
+    }
+  }
+     
 
-.site-nav__link--active {}
+.contacts__item:nth-child(2) {
+  @media screen and(max-width: 767px) {
+  order: 1;
+  margin-bottom: 64px;
+  }
+}
 
-.contacts {}
 
-.contacts__item {}
+.contacts__link {
+  
+}
 
-.contacts__link {}
 
-.contacts__logo {}
+.contacts__logo {
+  @media screen and(max-width: 767px) {
+    display: none;
+  }
+}
+
+
+.contacts__link--tel{
+    @media screen and(max-width: 767px) {
+      // font-weight: $font-weight-500;
+      // font-size: $font-size-34;
+      // line-height: $line-height-118;
+      // letter-spacing: 0.02em;
+    
+      // color: $accent-color;
+    }
+}
+
+.contacts__link--mail {
+}
 
 .menu-social {
   @media screen and(max-width:767px) {
@@ -191,7 +226,21 @@ background-color: transparent;
   }
 }
 
-.menu-social__item {}
+.menu-social__item {
+  
+  &:not(:last-child) {
+    @media screen and(max-width:767px) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    padding-right: 10px;
+  }
+}
+
+&:not(:first-child) {
+  @media screen and(max-width:767px) {
+    padding-left: 10px;
+  }
+}
+}
 
 .menu-social__link {
   @media screen and(max-width:767px){
@@ -201,17 +250,8 @@ background-color: transparent;
     
     letter-spacing: 0.02em;
     color: $accent-color;
-  }
 
-  &:not(::last-child){
-    border-right: 1px solid $accent-color;
-  }
+ 
+}
 }
 
-.contacts__link--tel{
-order: 1;
-}
-
-.contacts__link--mail{
-order: 2;
-}
