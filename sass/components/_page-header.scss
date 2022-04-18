@@ -4,7 +4,7 @@
     padding-top: 25px;
     padding-bottom: 25px;
 
-    @media screen and(max-width: 479px) {
+    @media screen and(max-width: 767px) {
         display: flex;
         justify-content: space-between;
         padding: 16px 15px;
@@ -14,7 +14,7 @@
 .site-nav {
     position: relative;
 
-    @media screen and(max-width: 479px) {
+    @media screen and(max-width: 767px) {
         display: inline-block;
         position: relative;
         margin-bottom: 302px;
@@ -35,7 +35,7 @@
         color: $accent-color;
     }
 
-    @media screen and(max-width: 479px) {
+    @media screen and(max-width: 767px) {
         font-weight: $font-weight-500;
         font-size: $font-size-40;
         line-height: $line-height-118;
@@ -49,7 +49,7 @@
 .site-nav__link--active {
     color: $accent-color;
 
-    @media screen and(max-width: 479px) {
+    @media screen and(max-width: 767px) {
         font-weight: 500;
         font-size: 40px;
         line-height: 47px;
@@ -91,7 +91,7 @@
     &:not(:last-child) {
         margin-right: 50px;
 
-        @media screen and(max-width: 479px) {
+        @media screen and(max-width: 767px) {
             margin-right: 0;
             margin-bottom: 32px;
         }
@@ -128,7 +128,7 @@
         display: none;
     }
 
-    @media screen and(max-width: 479px){
+    @media screen and(max-width: 767px){
     &:hover,
     &:focus{
         fill: $accent-color;
@@ -155,7 +155,7 @@
     font-size: 20px;
     height: 100px;
 
-    @media screen and(max-width: 479px) {
+    @media screen and(max-width: 767px) {
         display: none;
         position: absolute;
         top: 0;
@@ -181,7 +181,7 @@
     display: flex;
     margin-left: auto;
 
-    @media screen and(max-width: 479px) {
+    @media screen and(max-width: 767px) {
         display: inline-flex;
         flex-wrap: wrap;
     }
@@ -193,13 +193,13 @@
 }
 
 .contacts__item:nth-child(1) {
-    @media screen and(max-width: 479px) {
+    @media screen and(max-width: 767px) {
         order: 2;
     }
 }
 
 .contacts__item:nth-child(2) {
-    @media screen and(max-width: 479px) {
+    @media screen and(max-width: 767px) {
         order: 1;
     }
 }
@@ -223,14 +223,14 @@
         fill: $accent-color;
     }
 
-    @media screen and(max-width: 479px) {
+    @media screen and(max-width: 767px) {
         display: inline-flex;
         flex-wrap: wrap;
     }
 }
 
 .contacts__link--tel {
-    @media screen and(max-width: 479px) {
+    @media screen and(max-width: 767px) {
         margin-bottom: 32px;
         font-weight: $font-weight-500;
         font-size: $font-size-34;
@@ -242,7 +242,7 @@
 }
 
 .contacts__link--mail {
-    @media screen and(max-width: 479px) {
+    @media screen and(max-width: 767px) {
         font-weight: $font-weight-500;
         font-size: $font-size-24;
         line-height: $line-height-117;
@@ -256,13 +256,13 @@
 .contacts__logo {
     margin-right: 10px;
 
-    @media screen and(max-width: 479px) {
+    @media screen and(max-width: 767px) {
         display: none;
     }
 }
 
 .menu-social {
-    @media screen and(max-width:479px) {
+    @media screen and(max-width:767px) {
         display: inline-flex;
     }
 }
@@ -270,21 +270,21 @@
 .menu-social__item {
 
     &:not(:last-child) {
-        @media screen and(max-width: 479px) {
+        @media screen and(max-width: 767px) {
             border-right: 1px solid rgba(33, 33, 33, 0.2);
             padding-right: 10px;
         }
     }
 
     &:not(:first-child) {
-        @media screen and(max-width: 479px) {
+        @media screen and(max-width: 767px) {
             padding-left: 10px;
         }
     }
 }
 
 .menu-social__link {
-    @media screen and(max-width: 479px) {
+    @media screen and(max-width: 767px) {
         font-weight: $font-weight-500;
         font-size: $font-size-18;
         line-height: $line-height-122;
