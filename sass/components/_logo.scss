@@ -1,12 +1,19 @@
 .logo {
-  margin-right: 93px;
   color: $black-color;
-  font-family: $font-family-secondary;
-  font-size: $font-size-26;
-  line-height: $line-height-119;
-  letter-spacing: 0.03em;
+    font-family: $font-family-secondary;
+    @include fonts(700, 24px, 28px, 0.03em);
+ 
+
+    @media screen and(min-width: $tablet) {
+      margin-right: 88px;
+      @include fonts(700, 24px, 28px, 0.03em);
+    }
+
+    @media screen and(min-width: $desktop) { 
+      margin-right: 93px;
 }
 
-.logo__icon {
-  color: $accent-color;
+  &__icon {
+    color: $accent-color;
+  }
 }

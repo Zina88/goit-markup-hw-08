@@ -32,19 +32,16 @@ button {
 }
 
 .container {
+    max-width: 480px;
     padding: 0 15px;
     margin: 0 auto;
     
-    @media screen and (min-width: $mobile) {
-      width: $mobile;
-    }
-    
     @media screen and (min-width: $tablet) {
-      width: $tablet;
+      max-width: $tablet;
     }
     
     @media screen and (min-width: $desktop) {
-      width: $desktop;
+      max-width: $desktop;
     }
 }
 
