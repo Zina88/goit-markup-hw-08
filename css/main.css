@@ -127,6 +127,12 @@ button {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .site-nav {
+    margin-right: 305px;
+  }
+}
+
 .site-nav__link {
   font-weight: 500;
   font-size: 14px;
@@ -157,6 +163,15 @@ button {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .site-nav__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+}
+
 .site-nav__link--active {
   color: #2196f3;
 }
@@ -165,10 +180,8 @@ button {
   .site-nav__link--active {
     font-weight: 500;
     font-size: 40px;
-    line-height: 47px;
-    text-align: center;
+    line-height: 1.18;
     letter-spacing: 0.02em;
-    color: #2196F3;
   }
 }
 
@@ -334,8 +347,23 @@ button {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .contacts {
+    -webkit-box-orient: initial;
+    -webkit-box-direction: initial;
+        -ms-flex-direction: initial;
+            flex-direction: initial;
+  }
+}
+
 .contacts__item:not(:last-child) {
   margin-right: 50px;
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -424,6 +452,12 @@ button {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .contacts__link--mail {
+    margin-bottom: 0;
+  }
+}
+
 .contacts__logo {
   margin-right: 10px;
 }
@@ -485,7 +519,7 @@ button {
     margin-right: 88px;
     font-weight: 700;
     font-size: 24px;
-    line-height: 28px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
   }
 }
@@ -493,6 +527,10 @@ button {
 @media screen and (min-width: 1200px) {
   .logo {
     margin-right: 93px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
   }
 }
 
