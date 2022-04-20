@@ -1,0 +1,36 @@
+.menu-button {
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    transition: fill 250ms $transition-timing-function;
+
+    @media screen and(min-width: $tablet) {
+        display: none;
+    }
+
+    & .icon-menu {
+        display: none;
+    }
+
+    &.is-open .icon-menu {
+        display: block;
+    }
+
+    &.is-open .icon-close {
+        display: none;
+    }
+
+    @media screen and(max-width: 767px) {
+
+        &:hover,
+        &:focus {
+            fill: $accent-color;
+        }
+    }
+}

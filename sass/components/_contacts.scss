@@ -1,0 +1,106 @@
+.contacts {
+    display: flex;
+    margin-left: auto;
+
+    @media screen and(max-width: 767px) {
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
+
+    @media screen and(min-width: $tablet) {
+        flex-direction: column;
+    }
+
+    @media screen and(min-width: $desktop) {
+        flex-direction: initial;
+    }
+}
+
+
+.contacts__item:not(:last-child) {
+    margin-right: 50px;
+
+    @media screen and(min-width: $desktop) {
+        margin-right: 30px;
+    }
+}
+
+.contacts__item:nth-child(1) {
+    @media screen and(max-width: 767px) {
+        order: 2;
+    }
+}
+
+.contacts__item:nth-child(2) {
+    @media screen and(max-width: 767px) {
+        order: 1;
+    }
+}
+
+.contacts__link {
+    display: flex;
+    align-items: center;
+    @include fonts(500, 14px, 1.4, 0.02em);
+    color: $primary-text-color;
+    fill: $primary-text-color;
+
+    margin-bottom: 0;
+
+    transition: color 250ms $transition-timing-function, fill 250ms $transition-timing-function;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+        fill: $accent-color;
+    }
+
+    @media screen and(max-width: 767px) {
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
+
+    @media screen and(min-width: $tablet) {
+        @include fonts(500, 12px, 1.17, 0.02em);
+    }
+}
+
+
+.contacts__link--tel {
+    @media screen and(max-width: 767px) {
+        margin-bottom: 32px;
+        font-weight: $font-weight-500;
+        font-size: $font-size-34;
+        line-height: $line-height-118;
+        letter-spacing: 0.02em;
+
+        color: $accent-color;
+    }
+}
+
+.contacts__link--mail {
+    @media screen and(max-width: 767px) {
+        font-weight: $font-weight-500;
+        font-size: $font-size-24;
+        line-height: $line-height-117;
+        letter-spacing: 0.02em;
+
+        color: $primary-text-color;
+        margin-bottom: 64px;
+    }
+
+    @media screen and(min-width: $tablet) {
+        margin-bottom: 10px;
+    }
+
+    @media screen and(min-width: $desktop) {
+        margin-bottom: 0;
+    }
+}
+
+.contacts__logo {
+    margin-right: 10px;
+
+    @media screen and(max-width: 767px) {
+        display: none;
+    }
+}

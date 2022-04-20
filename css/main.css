@@ -107,6 +107,10 @@ button {
   }
 }
 
+.page-header {
+  border-bottom: 1px solid #ececec;
+}
+
 .site-nav {
   position: relative;
 }
@@ -205,6 +209,12 @@ button {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .site-nav__link--active::after {
+    bottom: -32px;
+  }
+}
+
 .site-nav__link--active:hover::after {
   -webkit-transform: scaleX(0.9);
           transform: scaleX(0.9);
@@ -224,10 +234,6 @@ button {
     margin-right: 0;
     margin-bottom: 32px;
   }
-}
-
-.page-header {
-  border-bottom: 1px solid #ececec;
 }
 
 .menu-button {

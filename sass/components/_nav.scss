@@ -1,0 +1,94 @@
+.site-nav {
+    position: relative;
+
+    @media screen and(max-width: 767px) {
+        display: inline-block;
+        margin-bottom: 302px;
+    }
+
+    @media screen and(min-width: $tablet) {
+        display: flex;
+        margin-right: 84px;
+    }
+
+    @media screen and(min-width: $desktop) {
+        margin-right: 305px;
+    }
+}
+
+.site-nav__link {
+    @include fonts(500, 14px, 1.14, 0.02em);
+    color: $title-text-color;
+
+
+    transition: color 250ms $transition-timing-function;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+
+    @media screen and(max-width: 767px) {
+        @include fonts(500, 40px, 1.18, 0.02em);
+        color: $title-text-color;
+    }
+
+    @media screen and(min-width: $tablet) {
+        line-height: 1.14;
+    }
+
+    @media screen and(min-width: $desktop) {
+        @include fonts(500, 14px, 1.14, 0.02em);
+    }
+}
+
+
+.site-nav__link--active {
+    color: $accent-color;
+
+    @media screen and(max-width: 767px) {
+        @include fonts(500, 40px, 1.18, 0.02em);
+    }
+
+    &::after {
+        @media screen and(min-width: $tablet) {
+            display: inline-block;
+            position: absolute;
+            content: '';
+            bottom: -34px;
+            left: 0;
+
+            background-color: $accent-color;
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+
+            transform: scale(1);
+            transition: transform 250ms $transition-timing-function;
+        }
+
+        @media screen and(min-width: $desktop) {
+            bottom: -32px;
+        }
+    }
+
+
+    &:hover::after {
+        transform: scaleX(0.9);
+    }
+}
+
+.site-nav__item {
+    position: relative;
+    margin-right: 0;
+
+    &:not(:last-child) {
+        margin-right: 50px;
+
+        @media screen and(max-width: 767px) {
+            margin-right: 0;
+            margin-bottom: 32px;
+        }
+    }
+
+}

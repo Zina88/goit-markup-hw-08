@@ -1,0 +1,41 @@
+.menu-icon {
+    margin-right: 15px;
+    // margin-top: 10px;
+}
+
+.icon-menu {
+    z-index: 2;
+}
+
+.icon-close {
+    z-index: 1;
+}
+
+.menu-container {
+    background-color: $white-color;
+    padding: 20px;
+    font-size: 20px;
+    height: auto;
+
+    @media screen and(max-width: 767px) {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 48px 40px;
+
+        &.is-open {
+            display: block;
+        }
+    }
+
+    @media screen and(min-width: $tablet) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+        padding: 0;
+    }
+}
