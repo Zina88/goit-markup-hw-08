@@ -1,10 +1,6 @@
 .feature {
   display: flex;
   flex-wrap: wrap;
-
-  @media screen and(min-width: $tablet) {
-    margin-bottom: 60px;
-  }
 }
 
 .feature__item {
