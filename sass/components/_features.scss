@@ -1,14 +1,45 @@
 .feature {
   display: flex;
   flex-wrap: wrap;
+
+  @media screen and(min-width: $tablet) {
+    margin-bottom: 60px;
+  }
 }
 
 .feature__item {
+  margin-bottom: 30px;
+
+  @media screen and(min-width: $tablet){
+    flex-basis: calc((100% - 30px) / 2);
+  }
+
+  @media screen and(min-width: $desktop){
   margin-right: 30px;
   flex-basis: calc((100% - 90px) / 4);
 
-  &:last-child {
-    margin-right: 0;
+    &:last-child {
+      margin-right: 0;
+    }
+  }   
+}
+
+.feature__item:nth-child(1){
+   @media screen and(min-width: $tablet) {
+   margin-right: 30px;
+  }
+}
+
+.feature__item:nth-child(3) {
+  @media screen and(min-width: $tablet) {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+} 
+
+.feature__item:nth-child(4) {
+  @media screen and(min-width: $tablet) {
+    margin-bottom: 0;
   }
 }
 
@@ -21,18 +52,28 @@
 }
 
 .feature__title {
-  color: $title-text-color;
-  font-weight: $font-weight-700;
-  font-size: $font-size-14;
-  line-height: $line-height-114;
-  letter-spacing: 0.03em;
+  text-align: center;
+  @include fonts(700, 14px, 1.14, 0.03em);
   text-transform: uppercase;
-  margin-top: 0;
+  color: $title-text-color;
   margin-bottom: 10px;
+  margin-top: 0;
+  text-transform: uppercase;
+
+  @media screen and(min-width: $tablet){
+    text-align: start;
+  }
+
+  @media screen and(min-width: $desktop){
+  color: $title-text-color;
+  }
 }
 
 .feature__text {
-  font-size: $font-size-14;
-  line-height: $line-height-171;
-  letter-spacing: 0.03em;
+  @include fonts(400, 14px, 1.71, 0.03em);
+  color: $primary-text-color;
+
+  @media screen and(min-width: $desktop) {
+  
+  }
 }
