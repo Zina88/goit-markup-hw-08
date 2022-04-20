@@ -966,20 +966,19 @@ button {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .feature__item:nth-child(1) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .feature__item:nth-child(2n + 1) {
     margin-right: 30px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .feature__item:nth-child(3) {
-    margin-right: 30px;
     margin-bottom: 0;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .feature__item:nth-child(4) {
     margin-bottom: 0;
   }
