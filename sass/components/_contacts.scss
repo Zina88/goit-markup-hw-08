@@ -62,6 +62,10 @@
     @media screen and(min-width: $tablet) {
         @include fonts(500, 12px, 1.17, 0.02em);
     }
+
+    @media screen and(min-width: $desktop) {
+        @include fonts(500, 14px, 1.14, 0.02em);
+    }
 }
 
 
