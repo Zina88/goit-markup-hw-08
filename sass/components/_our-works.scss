@@ -1,4 +1,8 @@
 .section--padding-top {
+  @media screen and(max-width: 1199px){
+    display: none;
+  }
+
   padding-top: 0;
 }
 

@@ -1110,6 +1110,12 @@ button {
   padding-top: 0;
 }
 
+@media screen and (max-width: 1199px) {
+  .section--padding-top {
+    display: none;
+  }
+}
+
 .work {
   display: -webkit-box;
   display: -ms-flexbox;
