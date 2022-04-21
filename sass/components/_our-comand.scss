@@ -3,20 +3,33 @@
 }
 
 .comand {
-  display: flex;
-  flex-wrap: wrap;
+display: block;
+margin: 0 auto;
+
+
+  @media screen and(min-width: $tablet){
+     display: flex;
+    flex-wrap: wrap;
+  }
+ 
 }
 
 .comand__items {
-  margin-right: 30px;
   background-color: $white-color;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+  0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  margin-bottom: 30px;
+
+  @media screen and(min-width: $desktop) {
+  margin-right: 30px;
+  
 
   &:last-child {
     margin-right: 0;
   }
+}
 }
 
 .avatar {
@@ -24,21 +37,16 @@
 }
 
 .avatar__title {
+  @include fonts(500, 16px, 1.19, 0.03em);
   text-align: center;
   margin-bottom: 10px;
   color: $title-text-color;
-  font-weight: $font-weight-500;
-  font-size: $font-size-16;
-  line-height: $line-height-119;
-  letter-spacing: 0.03em;
 }
 
 .avatar__text {
   text-align: center;
   margin-bottom: 16px;
-  font-size: 16px;
-  line-height: $line-height-119;
-  letter-spacing: 0.03em;
+  @include fonts(400, 16px, 1.19, 0.03em);
 }
 
 .social {
@@ -67,6 +75,7 @@
     color: $white-color;
   }
 }
+
 .social__icon {
   fill: currentColor;
 }
