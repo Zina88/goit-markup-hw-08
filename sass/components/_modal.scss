@@ -23,9 +23,6 @@
   left: 50%;
 
   padding: 40px;
-
-  // min-width: 528px;
-
   background-color: $white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -66,7 +63,7 @@
   align-items: center;
 
   margin-left: auto;
-  // width: 30px;
+  width: 30px;
   height: 30px;
 
   background-color: $white-color;
@@ -84,20 +81,14 @@
   }
 }
 
-/* modal-form */
 .modal-box__title {
-  margin-bottom: 12px;
-  font-weight: $font-weight-700;
-  font-size: $font-size-20;
-  line-height: $line-height-115;
-  text-align: center;
-  letter-spacing: 0.03em;
-
+  @include fonts(700, 20px, 1.50, 0.03em);
   color: $black-color;
+  margin-bottom: 12px;
+  text-align: center;
 }
 
 .modal-box__form {
-  // width: 448px;
   margin: 0 auto;
   text-align: center;
 }
@@ -112,19 +103,14 @@
 .modal-box__label {
   margin-bottom: 10px;
   text-align: start;
-
-  font-size: $font-size-12;
-  line-height: $line-height-117;
+  @include fonts(400, 12px, 1.17, 0.01em);
   margin-bottom: 4px;
-
-  letter-spacing: 0.01em;
-
   color: $primary-text-color;
 }
 
 .modal-box__input {
   height: 40px;
-  padding: 11px 12px 11px 42px;
+  padding: 11px 12px 11px auto;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
@@ -145,7 +131,6 @@
   position: absolute;
   top: 50%;
   left: 12px;
-
   fill: $title-text-color;
 
   transition: fill 250ms $transition-timing-function;
@@ -160,7 +145,6 @@
 
 .textarea__field {
   padding: 12px 16px;
-  // width: 448px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
@@ -225,22 +209,25 @@
 }
 
 .modal-policy__text {
-  font-size: $font-size-14;
-  line-height: $line-height-171;
-
-  letter-spacing: 0.03em;
+  @include fonts(400, 12px, 1.17, 0.03em);
   color: $primary-text-color;
+
+
+
+  @media screen and(min-width: $desktop){
+    @include fonts(400, 14px, 1.71, 0.03em);
+  }
 }
 
 .modal-policy__agreement {
   position: relative;
   text-decoration: none;
-
-  font-size: $font-size-14;
-  line-height: $line-height-117;
-
-  letter-spacing: 0.03em;
   color: $accent-color;
+  @include fonts(400, 12px, 1.17, 0.03em);
+
+  @media screen and(min-width: $desktop) {
+    @include fonts(400, 14px, 1.71, 0.03em);
+  }
 
   &::after {
     position: absolute;
@@ -254,7 +241,7 @@
 }
 
 .modal__submit {
-  // width: 200px;
+  min-width: 200px;
   height: 50px;
   padding: 10px 55px;
 
@@ -263,14 +250,9 @@
   border-radius: 4px;
   border-style: none;
 
-  font-weight: $font-weight-700;
-  font-size: $font-size-16;
-  line-height: $line-height-188;
-
+  @include fonts(700, 16px, 1.88, 0.06em);
   align-items: center;
   text-align: center;
-  letter-spacing: 0.06em;
-
   color: $white-color;
 
   transition: background-color 250ms $transition-timing-function;
