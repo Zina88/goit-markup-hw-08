@@ -19,12 +19,9 @@
     }
 
   @media screen and(min-width: $tablet) {
-  background-color: $section-color;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4)),
   url('/images/tablet-hero/tablet-hero.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+
 
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -41,9 +38,7 @@
   
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
   url('/images/desktop-hero/desktop-hero.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+
 
   @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
@@ -51,9 +46,10 @@
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)),
       url('/images/desktop-hero/desktop-hero@2x.jpg');
+    }
   }
 }
-}
+
 .hero__title {
   @include fonts(900, 26px, 1.62, 0.06em);
   text-align: center;
@@ -62,7 +58,7 @@
   color: $white-color;
 
   @media screen and(min-width: $desktop){
-  @include fonts(900, 30px, 1.36, 0.06em);
+  @include fonts(900, 44px, 1.36, 0.06em);
   }
 }
 
@@ -76,7 +72,6 @@
 
   align-items: center;
   text-align: center;
-  letter-spacing: 0.06em;
 
   background-color: $accent-color;
   color: $white-color;

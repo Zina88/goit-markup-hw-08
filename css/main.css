@@ -581,12 +581,8 @@ button {
 
 @media screen and (min-width: 768px) {
   .hero {
-    background-color: #2f303a;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4))), url("/images/tablet-hero/tablet-hero.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4)), url("/images/tablet-hero/tablet-hero.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
   }
 }
 
@@ -603,9 +599,6 @@ button {
     height: 600px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("/images/desktop-hero/desktop-hero.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/desktop-hero/desktop-hero.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
   }
 }
 
@@ -630,7 +623,7 @@ button {
 @media screen and (min-width: 1200px) {
   .hero__title {
     font-weight: 900;
-    font-size: 30px;
+    font-size: 44px;
     line-height: 1.36;
     letter-spacing: 0.06em;
   }
@@ -648,7 +641,6 @@ button {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  letter-spacing: 0.06em;
   background-color: #2196f3;
   color: #ffffff;
   font-weight: 700;
