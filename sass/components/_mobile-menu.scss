@@ -12,10 +12,12 @@
 }
 
 .menu-container {
+   
     background-color: $white-color;
     padding: 20px;
     font-size: 20px;
     height: auto;
+  
 
     @media screen and(max-width: 767px) {
         display: none;

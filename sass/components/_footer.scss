@@ -20,13 +20,14 @@
 }
 
 .wrapper {
-  @media screen and(min-width: $tablet) {
+  @media screen and(min-width: $tablet) and(max-width: 1199px){
     margin-right: 165px;
     margin-bottom: 60px;
   }
 
   @media screen and(min-width: $desktop){
   margin-right: 70px;
+  text-align: start;
   }
 
 }
@@ -95,6 +96,7 @@
 
   @media screen and(min-width: $desktop){
   margin-bottom: 20px;
+  text-align: start;
   }
 
 }
@@ -132,13 +134,14 @@
 
 .subscribe__title {
   margin-bottom: 20px;
-  font-weight: $font-weight-700;
-  font-size: $font-size-14;
-  line-height: $line-height-114;
-  letter-spacing: 0.03em;
+  @include fonts(700, 14px, 1.14, 0.03em);
   text-transform: uppercase;
 
   color: $white-color;
+
+  @media screen and(min-width: $desktop) {
+    text-align: start;
+  }
 }
 
 .form--position {
@@ -157,7 +160,7 @@
   flex-direction: column;
   margin-bottom: 20px;
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) and(max-width: 1199px){
    width: 450px;
   }
 
@@ -207,6 +210,7 @@
   text-align: inherit;
   padding: 10px 30px;
   min-width: 200px;
+  height: 50px;
 
   @include fonts(700, 16px, 1.88, 0.06em);
   background-color: $accent-color;
@@ -218,12 +222,18 @@
   transition: background-color 250ms $transition-timing-function;
 
   @media screen and(max-width: 767px) {
-    display: inline-block;
+    margin: 0 auto;
   }
   
-  @media screen and(min-width: $tablet) {
-    display: inline-block;
+  @media screen and(min-width: $tablet) and(max-width: 1199px) {
+  margin: 0 auto;
   }
+
+  @media screen and(min-width: $desktop) {
+
+  }
+
+
 
   &:hover,
   &:focus {
