@@ -386,12 +386,34 @@
             </li>
 
             <li class="comand__items">
-              <img
-                src="./images/mobile-comand/mobile-tarasov.jpg"
-                alt="Tarasov"
-                width="450"
-                height="460"
-              />
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/mobile-comand/mobile-tarasov.jpg    1x,
+                    ./images/mobile-comand/mobile-tarasov@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: $tablet)"
+                  srcset="
+                    ./images/tablet-comand/tablet-tarasov.jpg    1x,
+                    ./images/tablet-comand/tablet-tarasov@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: $desktop)"
+                  srcset="
+                    ./images/tablet-comand/desktop-tarasov.jpg    1x,
+                    ./images/tablet-comand/desktop-tarasov@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img src="./images/mobile-comand/mobile-tarasov.jpg" alt="Tarasov" />
+              </picture>
+
               <div class="avatar">
                 <h3 class="avatar__title">Николай Тарасов</h3>
                 <p class="avatar__text">Marketing</p>
@@ -433,12 +455,34 @@
             </li>
 
             <li class="comand__items">
-              <img
-                src="./images/mobile-comand/mobile-ermakov.jpg"
-                alt="Ermakov"
-                width="450"
-                height="460"
-              />
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/mobile-comand/mobile-ermakov.jpg    1x,
+                    ./images/mobile-comand/mobile-ermakov@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: $tablet)"
+                  srcset="
+                    ./images/tablet-comand/tablet-ermakov.jpg    1x,
+                    ./images/tablet-comand/tablet-ermakov@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: $desktop)"
+                  srcset="
+                    ./images/tablet-comand/desktop-ermakov.jpg    1x,
+                    ./images/tablet-comand/desktop-ermakov@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img src="./images/mobile-comand/mobile-ermakov.jpg" alt="Ermakov" />
+              </picture>
+
               <div class="avatar">
                 <h3 class="avatar__title">Михаил Ермаков</h3>
                 <p class="avatar__text">UI Designer</p>

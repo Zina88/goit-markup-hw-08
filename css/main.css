@@ -1173,10 +1173,14 @@ button {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
 .comand__items {
+  margin-right: 30px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1184,13 +1188,8 @@ button {
   margin-bottom: 30px;
 }
 
-@media screen and (min-width: 1200px) {
-  .comand__items {
-    margin-right: 30px;
-  }
-  .comand__items:last-child {
-    margin-right: 0;
-  }
+.comand__items:last-child {
+  margin-right: 0;
 }
 
 .avatar {
