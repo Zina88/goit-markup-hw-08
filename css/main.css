@@ -1161,11 +1161,6 @@ button {
   background-color: #f5f4fa;
 }
 
-.comand {
-  display: block;
-  margin: 0 auto;
-}
-
 @media screen and (min-width: 768px) {
   .comand {
     display: -webkit-box;
@@ -1180,16 +1175,38 @@ button {
 }
 
 .comand__items {
-  margin-right: 30px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  margin-bottom: 30px;
 }
 
-.comand__items:last-child {
-  margin-right: 0;
+@media screen and (max-width: 767px) {
+  .comand__items {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .comand__items {
+    width: calc((100% - 30px) / 2);
+  }
+  .comand__items:not(:nth-child(2n)) {
+    margin-right: 30px;
+  }
+  .comand__items:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .comand__items {
+    -ms-flex-preferred-size: calc((100% - 3 * 30px) / 4);
+        flex-basis: calc((100% - 3 * 30px) / 4);
+  }
+  .comand__items:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .avatar {
