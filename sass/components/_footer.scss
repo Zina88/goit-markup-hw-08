@@ -1,15 +1,34 @@
 .page-footer {
   padding: 60px 0;
-  background-color: $section-color;
+  background-color: $section-color;  
+
+
+  @media screen and(min-width: $desktop){
+  align-items: baseline;
+  display: flex;
+  }
 }
 
 .page-footer--bgc {
-  align-items: baseline;
-  display: flex;
+  text-align: center;
+
+  @media screen and(min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .wrapper {
+  @media screen and(min-width: $tablet) {
+    margin-right: 165px;
+    margin-bottom: 60px;
+  }
+
+  @media screen and(min-width: $desktop){
   margin-right: 70px;
+  }
+
 }
 
 .wrapper__logo {
@@ -17,9 +36,7 @@
   margin-bottom: 20px;
   color: $white-color;
   font-family: $font-family-secondary;
-  font-size: $font-size-26;
-  line-height: $line-height-119;
-  letter-spacing: 0.03em;
+  @include fonts(400, 26px, 1.19, 0.03em);
 }
 
 .wrapper__icon {
@@ -27,7 +44,9 @@
 }
 
 .addres {
-  // width: 231px;
+  @media screen and(max-width: 767px){
+    margin-bottom: 60px;
+  }
 }
 
 .addres__items {
@@ -42,18 +61,14 @@
   font-style: normal;
   color: $white-color;
   background-color: $section-color;
-  font-size: $font-size-14;
-  line-height: $line-height-171;
-  letter-spacing: 0.03em;
+  @include fonts(400, 14px, 1.71, 0.03em);
 }
 
 .addres__contacts {
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
   background-color: $section-color;
-  font-size: $font-size-14;
-  line-height: $line-height-171;
-  letter-spacing: 0.03em;
+  @include fonts(400, 14px, 1.71, 0.03em);
 
   transition: color 250ms $transition-timing-function;
 
@@ -64,24 +79,32 @@
 }
 
 .accede {
+  margin-bottom: 60px;
+
+  @media screen and(min-width: $desktop){
   margin-right: 93px;
+  }
+ 
 }
 
 .accede__title {
-  font-weight: $font-weight-700;
-  font-size: $font-size-14;
-  line-height: $line-height-114;
-  letter-spacing: 0.03em;
+  @include fonts(700, 14px, 1.14, 0.03em);
   text-transform: uppercase;
   color: $white-color;
   margin-bottom: 20px;
+
+  @media screen and(min-width: $desktop){
+  margin-bottom: 20px;
+  }
+
 }
 
 .social {
   display: flex;
+  justify-content: center;
   padding: 0;
   margin: 0;
-  // width: 206px;
+ 
 }
 
 .social__item:not(:last-child) {
@@ -119,18 +142,32 @@
 }
 
 .form--position {
-  position: relative;
-  display: flex;
-  margin: 0 auto;
+ 
+
+  @media screen and (min-width: $desktop){
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+  }
+ 
 }
 
 .form__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $tablet) {
+   width: 450px;
+  }
+
+  @media screen and (min-width: $desktop) {
   position: relative;
   display: flex;
   flex-direction: column;
-  // width: 358px;
   height: 50px;
   margin-right: 10px;
+    }
 }
 
 .form__input {
@@ -171,11 +208,7 @@
   padding: 10px 30px;
   min-width: 200px;
 
-  font-weight: $font-weight-700;
-  font-size: $font-size-16;
-  line-height: $line-height-188;
-  letter-spacing: 0.06em;
-
+  @include fonts(700, 16px, 1.88, 0.06em);
   background-color: $accent-color;
   color: $white-color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -183,6 +216,14 @@
   border-style: none;
 
   transition: background-color 250ms $transition-timing-function;
+
+  @media screen and(max-width: 767px) {
+    display: inline-block;
+  }
+  
+  @media screen and(min-width: $tablet) {
+    display: inline-block;
+  }
 
   &:hover,
   &:focus {
