@@ -1216,19 +1216,25 @@ button {
   letter-spacing: 0.03em;
 }
 
-.social {
+.comand-social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0;
   margin: 0;
 }
 
-.social__item:not(:last-child) {
+.comand-social__item:not(:last-child) {
   margin-right: 10px;
 }
 
-.social__link {
+.comand-social__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1246,12 +1252,12 @@ button {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social__link:hover, .social__link:focus {
+.comand-social__link:hover, .comand-social__link:focus {
   background-color: #2196f3;
   color: #ffffff;
 }
 
-.social__icon {
+.comand-social__icon {
   fill: currentColor;
 }
 

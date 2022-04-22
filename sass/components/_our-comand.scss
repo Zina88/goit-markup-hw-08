@@ -49,22 +49,25 @@ margin: 0 auto;
   @include fonts(400, 16px, 1.19, 0.03em);
 }
 
-.social {
+.comand-social {
   display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0;
   margin: 0;
 }
 
-.social__item:not(:last-child) {
+.comand-social__item:not(:last-child) {
   margin-right: 10px;
 }
 
-.social__link {
+.comand-social__link {
   @include centerFlex();
   width: 44px;
   height: 44px;
   border-radius: 50%;
   color: $logo-color;
+
 
   transition: background-color 250ms $transition-timing-function,
     color 250ms $transition-timing-function;
@@ -76,6 +79,6 @@ margin: 0 auto;
   }
 }
 
-.social__icon {
+.comand-social__icon {
   fill: currentColor;
 }
