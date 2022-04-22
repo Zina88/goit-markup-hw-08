@@ -248,12 +248,34 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="comand">
             <li class="comand__items">
-              <img
-                src="./images/mobile-comand/mobile-dem'yanenko.jpg"
-                alt="Demianenko"
-                width="450"
-                height="460"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile-comand/mobile-dem'yanenko.jpg    1x,
+                    ./images/mobile-comand/mobile-dem'yanenko@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet-comand/tablet-dem'yanenko.jpg    1x,
+                    ./images/tablet-comand/tablet-dem'yanenko@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                  media="(min-width: $tablet)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet-comand/desktop-dem'yanenko.jpg    1x,
+                    ./images/tablet-comand/desktop-dem'yanenko@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                  media="(min-width: $desktop)"
+                />
+                <img src="./images/mobile-comand/mobile-dem'yanenko.jpg" alt="Demianenko" />
+              </picture>
+
               <div class="avatar">
                 <h3 class="avatar__title">Игорь Демьяненко</h3>
                 <p class="avatar__text">Product Designer</p>
@@ -295,12 +317,34 @@
             </li>
 
             <li class="comand__items">
-              <img
-                src="./images/mobile-comand/mobile-repina.jpg"
-                alt="Repina"
-                width="450"
-                height="460"
-              />
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/mobile-comand/mobile-repina.jpg    1x,
+                    ./images/mobile-comand/mobile-repina@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: $tablet)"
+                  srcset="
+                    ./images/tablet-comand/tablet-repina.jpg    1x,
+                    ./images/tablet-comand/tablet-repina@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: $desktop)"
+                  srcset="
+                    ./images/tablet-comand/desktop-repina.jpg    1x,
+                    ./images/tablet-comand/desktop-repina@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img src="./images/mobile-comand/mobile-repina.jpg" alt="Repina" />
+              </picture>
+
               <div class="avatar">
                 <h3 class="avatar__title">Ольга Репина</h3>
                 <p class="avatar__text">Frontend Developer</p>
