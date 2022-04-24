@@ -1,5 +1,5 @@
 .menu-button {
-    position: absolute;
+    position: relative;
     right: 0;
     z-index: 2;
     display: inline-flex;
@@ -14,16 +14,32 @@
         display: none;
     }
 
-    & .icon-menu {
-        display: none;
+    & .mobile-menu__open {
+        // display:  none;
+        opacity: 0;
+        transform: scale(0.3) rotate(90deg) translateY(100%);
     }
 
-    &.is-open .icon-menu {
-        display: block;
+    &.is-open .mobile-menu__open {
+        // display: block;
+        opacity: 1;
+        transform: scale(1) rotate(0) translateY(0);
+        transform-origin: center;
+        transition: opacity 400ms ease,
+        transform 400ms ease;
     }
 
-    &.is-open .icon-close {
-        display: none;
+    & .mobile-menu__close{
+        opacity: 1;
+        transform: scale(1) rotate(0) translateY(0);
+    }
+    &.is-open .mobile-menu__close {
+        // display: none;
+        opacity: 0;
+        transform: scale(0.3) rotate(0);
+        transform-origin: center;
+        transition: opacity 400ms ease 300ms,
+        transform 400ms ease 300ms;
     }
 
     @media screen and(max-width: 767px) {

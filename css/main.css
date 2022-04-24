@@ -96,14 +96,9 @@ button {
       -ms-flex-align: center;
           align-items: center;
   padding: 15px;
-}
-
-@media screen and (max-width: 767px) {
-  .page-header__container {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media screen and (min-width: 768px) {
@@ -243,7 +238,7 @@ button {
 }
 
 .menu-button {
-  position: absolute;
+  position: relative;
   right: 0;
   z-index: 2;
   display: -webkit-inline-box;
@@ -263,16 +258,40 @@ button {
   }
 }
 
-.menu-button .icon-menu {
-  display: none;
+.menu-button .mobile-menu__open {
+  opacity: 0;
+  -webkit-transform: scale(0.3) rotate(90deg) translateY(100%);
+          transform: scale(0.3) rotate(90deg) translateY(100%);
 }
 
-.menu-button.is-open .icon-menu {
-  display: block;
+.menu-button.is-open .mobile-menu__open {
+  opacity: 1;
+  -webkit-transform: scale(1) rotate(0) translateY(0);
+          transform: scale(1) rotate(0) translateY(0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: opacity 400ms ease, -webkit-transform 400ms ease;
+  transition: opacity 400ms ease, -webkit-transform 400ms ease;
+  transition: opacity 400ms ease, transform 400ms ease;
+  transition: opacity 400ms ease, transform 400ms ease, -webkit-transform 400ms ease;
 }
 
-.menu-button.is-open .icon-close {
-  display: none;
+.menu-button .mobile-menu__close {
+  opacity: 1;
+  -webkit-transform: scale(1) rotate(0) translateY(0);
+          transform: scale(1) rotate(0) translateY(0);
+}
+
+.menu-button.is-open .mobile-menu__close {
+  opacity: 0;
+  -webkit-transform: scale(0.3) rotate(0);
+          transform: scale(0.3) rotate(0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: opacity 400ms ease 300ms, -webkit-transform 400ms ease 300ms;
+  transition: opacity 400ms ease 300ms, -webkit-transform 400ms ease 300ms;
+  transition: opacity 400ms ease 300ms, transform 400ms ease 300ms;
+  transition: opacity 400ms ease 300ms, transform 400ms ease 300ms, -webkit-transform 400ms ease 300ms;
 }
 
 @media screen and (max-width: 767px) {
@@ -574,22 +593,22 @@ button {
 
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/mobile-hero/mobile-hero@2x.jpg");
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile-hero/mobile-hero@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/mobile-hero@2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/mobile-hero@2x.jpg");
   }
 }
 
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4))), url("/images/tablet-hero/tablet-hero.jpg");
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4)), url("/images/tablet-hero/tablet-hero.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4))), url("../images/hero/tablet-hero.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4)), url("../images/hero/tablet-hero.jpg");
   }
 }
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/tablet-hero/tablet-hero@2x.jpg");
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet-hero/tablet-hero@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/tablet-hero@2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/tablet-hero@2x.jpg");
   }
 }
 
@@ -597,15 +616,15 @@ button {
   .hero {
     padding: 200px 0;
     height: 600px;
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/desktop-hero/desktop-hero.jpg");
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop-hero/desktop-hero.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/desktop-hero.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/desktop-hero.jpg");
   }
 }
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/desktop-hero/desktop-hero@2x.jpg");
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop-hero/desktop-hero@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/desktop-hero@2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/desktop-hero@2x.jpg");
   }
 }
 
