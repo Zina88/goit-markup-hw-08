@@ -220,21 +220,61 @@
           <ul class="work">
             <li class="work__item">
               <div class="work__thumb">
-                <img src="images/comp.jpg" alt="Computer" width="370" height="295" />
+                <picture>
+                  <source
+                    srcset="./images/our-work/comp.webp 1x, ./images/our-work/comp@2x.webp 2x"
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/our-work/comp.jpg 1x, ./images/our-work/comp@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                    type="image/jpg"
+                    s
+                  />
+                  <img src="images/our-work/comp.jpg" alt="Computer" width="370" height="295" />
+                </picture>
+
                 <p class="work__text">Десктопные приложения</p>
               </div>
             </li>
 
             <li class="work__item">
               <div class="work__thumb">
-                <img src="images/phone.jpg" alt="Phone" width="370" height="295" />
+                <picture>
+                  <source
+                    srcset="./images/our-work/phone.webp 1x, ./images/our-work/phone@2x.webp 2x"
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/our-work/phone.jpg 1x, ../images/our-work/phone@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                    type="image/jpg"
+                  />
+                  <img src="./images/our-work/phone.jpg" alt="Phone" width="370" height="295" />
+                </picture>
+
                 <p class="work__text">Мобильные приложения</p>
               </div>
             </li>
 
             <li class="work__item">
               <div class="work__thumb">
-                <img src="images/color.jpg" alt="Color" width="370" height="295" />
+                <picture>
+                  <source
+                    srcset="./images/our-work/color.webp 1x, ./images/our-work/color@2x.webp 2x"
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/our-work/color.jpg 1x, ./images/our-work/color@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                    type="image/jpg"
+                  />
+                  <img src="./images/our-work/color.jpg" alt="Phone" width="370" height="295" />
+                </picture>
+
                 <p class="work__text">Дизайнерские решения</p>
               </div>
             </li>
@@ -251,29 +291,61 @@
               <picture>
                 <source
                   srcset="
-                    ./images/mobile-comand/mobile-dem'yanenko.jpg    1x,
-                    ./images/mobile-comand/mobile-dem'yanenko@2x.jpg 2x
+                    ./images/desktop-comand/desktop-dem'yanenko.webp    1x,
+                    ./images/desktop-comand/desktop-dem'yanenko@2x.webp 2x
                   "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/desktop-comand/desktop-dem'yanenko.jpg    1x,
+                    ./images/desktop-comand/desktop-dem'yanenko@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
                   type="image/jpg"
-                  media="(max-width: 767px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/tablet-comand/tablet-dem'yanenko.webp    1x,
+                    ./images/tablet-comand/tablet-dem'yanenko@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
                 />
                 <source
                   srcset="
                     ./images/tablet-comand/tablet-dem'yanenko.jpg    1x,
                     ./images/tablet-comand/tablet-dem'yanenko@2x.jpg 2x
                   "
+                  media="(min-width: 768px)"
                   type="image/jpg"
-                  media="(min-width: $tablet)"
+                />
+
+                <source
+                  srcset="
+                    ./images/mobile-comand/mobile-dem'yanenko.webp   1x,
+                    /images/mobile-comand/mobile-dem'yanenko@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
                 />
                 <source
                   srcset="
-                    ./images/tablet-comand/desktop-dem'yanenko.jpg    1x,
-                    ./images/tablet-comand/desktop-dem'yanenko@2x.jpg 2x
+                    ./images/mobile-comand/mobile-dem'yanenko.jpg    1x,
+                    ./images/mobile-comand/mobile-dem'yanenko@2x.jpg 2x
                   "
-                  type="image/jpg"
-                  media="(min-width: $desktop)"
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
                 />
-                <img src="./images/mobile-comand/mobile-dem'yanenko.jpg" alt="Demianenko" />
+
+                <img
+                  src="./images/tablet-comand/tablet-dem'yanenko.jpg"
+                  alt="Demianenko"
+                  width="450"
+                  height="460"
+                />
               </picture>
 
               <div class="avatar">
@@ -319,30 +391,61 @@
             <li class="comand__items">
               <picture>
                 <source
-                  media="(max-width: 767px)"
                   srcset="
-                    ./images/mobile-comand/mobile-repina.jpg    1x,
-                    ./images/mobile-comand/mobile-repina@2x.jpg 2x
+                    ./images/desktop-comand/desktop-repina.webp    1x,
+                    ./images/desktop-comand/desktop-repina@2x.webp 2x
                   "
-                  type="image/jpg"
+                  media="(min-width: 1200px)"
+                  type="image/webp"
                 />
                 <source
-                  media="(min-width: $tablet)"
-                  srcset="
-                    ./images/tablet-comand/tablet-repina.jpg    1x,
-                    ./images/tablet-comand/tablet-repina@2x.jpg 2x
-                  "
-                  type="image/jpg"
-                />
-                <source
-                  media="(min-width: $desktop)"
                   srcset="
                     ./images/tablet-comand/desktop-repina.jpg    1x,
                     ./images/tablet-comand/desktop-repina@2x.jpg 2x
                   "
+                  media="(min-width: 1200px)"
                   type="image/jpg"
                 />
-                <img src="./images/mobile-comand/mobile-repina.jpg" alt="Repina" />
+
+                <source
+                  srcset="
+                    ./images/tablet-comand/tablet-repina.webp    1x,
+                    ./images/tablet-comand/tablet-repina@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tablet-comand/tablet-repina.jpg    1x,
+                    ./images/tablet-comand/tablet-repina@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpg"
+                />
+
+                <source
+                  srcset="
+                    ./images/mobile-comand/mobile-repina.webp    1x,
+                    ./images/mobile-comand/mobile-repina@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile-comand/mobile-repina.jpg    1x,
+                    ./images/mobile-comand/mobile-repina@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/tablet-comand/tablet-repina.jpg"
+                  alt="Repina"
+                  width="450"
+                  height="460"
+                />
               </picture>
 
               <div class="avatar">
@@ -388,30 +491,62 @@
             <li class="comand__items">
               <picture>
                 <source
-                  media="(max-width: 767px)"
                   srcset="
-                    ./images/mobile-comand/mobile-tarasov.jpg    1x,
-                    ./images/mobile-comand/mobile-tarasov@2x.jpg 2x
+                    ./images/desktop-comand/desktop-tarasov.webp    1x,
+                    ./images/desktop-comand/desktop-tarasov@2x.webp 2x
                   "
-                  type="image/jpg"
+                  media="(min-width: 1200px)"
+                  type="image/webp"
                 />
                 <source
-                  media="(min-width: $tablet)"
-                  srcset="
-                    ./images/tablet-comand/tablet-tarasov.jpg    1x,
-                    ./images/tablet-comand/tablet-tarasov@2x.jpg 2x
-                  "
-                  type="image/jpg"
-                />
-                <source
-                  media="(min-width: $desktop)"
                   srcset="
                     ./images/tablet-comand/desktop-tarasov.jpg    1x,
                     ./images/tablet-comand/desktop-tarasov@2x.jpg 2x
                   "
+                  media="(min-width: 1200px)"
                   type="image/jpg"
                 />
-                <img src="./images/mobile-comand/mobile-tarasov.jpg" alt="Tarasov" />
+
+                <source
+                  srcset="
+                    ./images/tablet-comand/tablet-tarasov.webp    1x,
+                    ./images/tablet-comand/tablet-tarasov@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tablet-comand/tablet-tarasov.jpg    1x,
+                    ./images/tablet-comand/tablet-tarasov@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpg"
+                />
+
+                <source
+                  srcset="
+                    ./images/mobile-comand/mobile-tarasov.webp    1x,
+                    ./images/mobile-comand/mobile-tarasov@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile-comand/mobile-tarasov.jpg    1x,
+                    ./images/mobile-comand/mobile-tarasov@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+
+                <img
+                  src="./images/tablet-comand/tablet-tarasov.jpg"
+                  alt="Tarasov"
+                  width="450"
+                  height="460"
+                />
               </picture>
 
               <div class="avatar">
@@ -457,30 +592,61 @@
             <li class="comand__items">
               <picture>
                 <source
-                  media="(max-width: 767px)"
                   srcset="
-                    ./images/mobile-comand/mobile-ermakov.jpg    1x,
-                    ./images/mobile-comand/mobile-ermakov@2x.jpg 2x
+                    ./images/desktop-comand/desktop-ermakov.webp    1x,
+                    ./images/desktop-comand/desktop-ermakov@2x.webp 2x
                   "
-                  type="image/jpg"
+                  media="(min-width: 1200px)"
+                  type="image/webp"
                 />
                 <source
-                  media="(min-width: $tablet)"
-                  srcset="
-                    ./images/tablet-comand/tablet-ermakov.jpg    1x,
-                    ./images/tablet-comand/tablet-ermakov@2x.jpg 2x
-                  "
-                  type="image/jpg"
-                />
-                <source
-                  media="(min-width: $desktop)"
                   srcset="
                     ./images/tablet-comand/desktop-ermakov.jpg    1x,
                     ./images/tablet-comand/desktop-ermakov@2x.jpg 2x
                   "
+                  media="(min-width: 1200px)"
                   type="image/jpg"
                 />
-                <img src="./images/mobile-comand/mobile-ermakov.jpg" alt="Ermakov" />
+
+                <source
+                  srcset="
+                    ./images/tablet-comand/tablet-ermakov.webp    1x,
+                    ./images/tablet-comand/tablet-ermakov@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tablet-comand/tablet-ermakov.jpg    1x,
+                    ./images/tablet-comand/tablet-ermakov@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpg"
+                />
+
+                <source
+                  srcset="
+                    ./images/mobile-comand/mobile-ermakov.webp    1x,
+                    ./images/mobile-comand/mobile-ermakov@2x.webp 2x
+                  "
+                  media="(ax-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile-comand/mobile-ermakov.jpg    1x,
+                    ./images/mobile-comand/mobile-ermakov@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/mobile-comand/mobile-ermakov.jpg"
+                  alt="Ermakov"
+                  width="450"
+                  height="460"
+                />
               </picture>
 
               <div class="avatar">
