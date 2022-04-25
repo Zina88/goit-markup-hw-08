@@ -2,6 +2,8 @@ body {
   background-color: $white-color;
   color: $primary-text-color;
   font-family: $font-family-primary;
+  font-weight: 400;
+  margin: 0 auto;
 }
 
 h1,
@@ -25,6 +27,7 @@ img {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 button {
@@ -32,10 +35,14 @@ button {
 }
 
 .container {
-    max-width: 480px;
     padding: 0 15px;
     margin: 0 auto;
-    
+
+    // @media screen and(max-width: 767px){
+    //   max-width: 480px;
+    //  }
+     
+
     @media screen and (min-width: $tablet) {
       max-width: $tablet;
     }
@@ -61,8 +68,5 @@ button {
   text-align: center;
   margin-bottom: 50px;
   color: $title-text-color;
-  font-weight: $font-weight-700;
-  font-size: $font-size-36;
-  line-height: $line-height-116;
-  letter-spacing: 0.03em;
+  @include fonts(700, 36px, 1.16, 0.03em);
 }

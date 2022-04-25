@@ -7,7 +7,8 @@
     padding: 0;
     border: none;
     background-color: transparent;
-
+    margin-left: auto;
+    
     transition: fill 250ms $transition-timing-function;
 
     @media screen and(min-width: $tablet) {
