@@ -259,6 +259,7 @@ button {
   border: none;
   background-color: transparent;
   margin-left: auto;
+  margin-right: 15px;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -312,7 +313,6 @@ button {
 }
 
 .mobile-menu {
-  margin-right: 15px;
   position: relative;
 }
 
@@ -1874,6 +1874,7 @@ button {
 .grid__box {
   position: relative;
   overflow: hidden;
+  z-index: -1;
 }
 
 .grid__text {
@@ -1920,6 +1921,7 @@ button {
 }
 
 .aside__subtitle {
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;

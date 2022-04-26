@@ -39,6 +39,7 @@
   position: relative;
   @extend %width;
   overflow: hidden;
+  z-index: -1;
 }
 
 .grid__text {
@@ -76,16 +77,10 @@
 .aside__title {
   margin-bottom: 4px;
   color: $title-text-color;
-  font-weight: $font-weight-700;
-  font-size: $font-size-18;
-  line-height: $line-height-200;
-
-  letter-spacing: 0.06em;
+  @include fonts(700, 18px, 2.00, 0.06em);
 }
 
 .aside__subtitle {
-  font-size: $font-size-16;
-  line-height: $line-height-188;
-  letter-spacing: 0.03em;
+  @include fonts(400, 16px, 1.88, 0.03em);
   color: $primary-text-color;
 }
