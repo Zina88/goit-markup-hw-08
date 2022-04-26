@@ -3,9 +3,6 @@
 }
 
 .comand {
-
-
-
   @media screen and(min-width: $tablet){
      display: flex;
     flex-wrap: wrap;
@@ -23,6 +20,10 @@
 
   @media screen and(max-width: 767px){
       margin-bottom: 30px;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
   }
 
 
@@ -39,7 +40,7 @@
    }   
 
   @media screen and(min-width: $desktop) {
-    flex-basis: calc((100% - 3 * 30px) / 4);
+    width: calc((100% - 3 * 30px) / 4);
     
     &:not(:last-child) {
       margin-right: 30px;
@@ -48,7 +49,15 @@
 }
 
 .avatar {
-  padding: 30px 32px;
+  padding-bottom: 24px;
+  padding-top: 30px;
+  margin-left: 32px;
+  margin-right: 32px;
+
+  @media screen and(min-width: $desktop){
+    padding: 30px 32px;
+  }
+  
 }
 
 .avatar__title {

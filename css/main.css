@@ -82,12 +82,37 @@ button {
 
 .section__title {
   text-align: center;
-  margin-bottom: 50px;
   color: #212121;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
+}
+
+@media screen and (max-width: 767px) {
+  .section__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section__title {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+  }
 }
 
 .page-header {
@@ -117,8 +142,15 @@ button {
 
 @media screen and (min-width: 768px) {
   .page-header__container {
-    padding-top: 26px;
-    padding-bottom: 26px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-header__container {
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 }
 
@@ -205,7 +237,7 @@ button {
     display: inline-block;
     position: absolute;
     content: '';
-    bottom: -34px;
+    bottom: -32px;
     left: 0;
     background-color: #2196f3;
     width: 100%;
@@ -1236,6 +1268,9 @@ button {
   .comand__items {
     margin-bottom: 30px;
   }
+  .comand__items:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -1252,8 +1287,7 @@ button {
 
 @media screen and (min-width: 1200px) {
   .comand__items {
-    -ms-flex-preferred-size: calc((100% - 3 * 30px) / 4);
-        flex-basis: calc((100% - 3 * 30px) / 4);
+    width: calc((100% - 3 * 30px) / 4);
   }
   .comand__items:not(:last-child) {
     margin-right: 30px;
@@ -1261,7 +1295,16 @@ button {
 }
 
 .avatar {
-  padding: 30px 32px;
+  padding-bottom: 24px;
+  padding-top: 30px;
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+@media screen and (min-width: 1200px) {
+  .avatar {
+    padding: 30px 32px;
+  }
 }
 
 .avatar__title {
@@ -1445,7 +1488,7 @@ button {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .wrapper {
     margin-right: 165px;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
 }
 
@@ -1633,6 +1676,7 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 358px;
     height: 50px;
     margin-right: 10px;
   }
