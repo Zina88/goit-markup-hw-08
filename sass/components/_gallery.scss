@@ -11,20 +11,15 @@
 }
 
 .grid__item {
+  margin-bottom: 30px;
 
+  @media screen and(min-width: $tablet) {
+    margin-right: 30px;
+    width: calc((100% - 60px) / 2);
+  }
 
   @media screen and(min-width: $desktop){
   width: calc((100% - 90px) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
-
-//   &:nth-child(3n) {
-//     margin-right: 0;
-//   }
-// }
-
-//   &:nth-last-child(-n + 3) {
-//     margin-bottom: 0;
   }
 }
 
