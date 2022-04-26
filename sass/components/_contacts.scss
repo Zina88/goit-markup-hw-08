@@ -20,6 +20,10 @@
 .contacts__item:not(:last-child) {
     margin-right: 50px;
 
+    @media screen and(min-width: $tablet) and(max-width: 1199px){
+        margin-right: 0;
+    }
+
     @media screen and(min-width: $desktop) {
         margin-right: 30px;
     }
