@@ -1,8 +1,8 @@
 .grid {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
-  margin-bottom: -30px;
+  margin-left: -30px;
+  margin-top: -30px;
 
   @media screen and(max-width: 767px){
     justify-content: center;
@@ -11,10 +11,10 @@
 }
 
 .grid__item {
-  margin-bottom: 30px;
+  margin-top: 30px;
 
   @media screen and(min-width: $tablet) {
-    margin-right: 30px;
+    margin-left: 30px;
     width: calc((100% - 60px) / 2);
   }
 
@@ -93,6 +93,12 @@
   border-left: 1px solid $border-color;
   border-right: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
+}
+
+.aside--padding {
+  @media screen and(min-width: 768px) and(max-width: 1199px) {
+    padding-bottom: 55px;
+  }
 }
 
 .aside__title {

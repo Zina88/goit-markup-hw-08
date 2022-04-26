@@ -3,8 +3,14 @@
 }
 
 .comand {
+  @media screen and(max-width: 767px){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+  
   @media screen and(min-width: $tablet){
-     display: flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -51,11 +57,10 @@
 .avatar {
   padding-bottom: 24px;
   padding-top: 30px;
-  margin-left: 32px;
-  margin-right: 32px;
 
   @media screen and(min-width: $desktop){
     padding: 30px 32px;
+    
   }
   
 }

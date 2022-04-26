@@ -1099,9 +1099,13 @@ button {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .feature__item {
+  width: 450px;
   margin-bottom: 30px;
 }
 
@@ -1244,6 +1248,19 @@ button {
   background-color: #f5f4fa;
 }
 
+@media screen and (max-width: 767px) {
+  .comand {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .comand {
     display: -webkit-box;
@@ -1297,8 +1314,6 @@ button {
 .avatar {
   padding-bottom: 24px;
   padding-top: 30px;
-  margin-left: 32px;
-  margin-right: 32px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1878,8 +1893,8 @@ button {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-right: -30px;
-  margin-bottom: -30px;
+  margin-left: -30px;
+  margin-top: -30px;
 }
 
 @media screen and (max-width: 767px) {
@@ -1892,12 +1907,12 @@ button {
 }
 
 .grid__item {
-  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 @media screen and (min-width: 768px) {
   .grid__item {
-    margin-right: 30px;
+    margin-left: 30px;
     width: calc((100% - 60px) / 2);
   }
 }
@@ -1992,6 +2007,12 @@ button {
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .aside--padding {
+    padding-bottom: 55px;
+  }
 }
 
 .aside__title {
