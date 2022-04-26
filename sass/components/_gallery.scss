@@ -38,7 +38,7 @@
 .grid__box {
   position: relative;
   @extend %width;
-  overflow: hidden;
+  // overflow: hidden;
   z-index: -1;
 }
 
@@ -49,7 +49,7 @@
   @extend %width;
   background-color: rgba(33, 150, 243, 0.9);
 
-  transform: translateY(100%);
+  // transform: translateY(100%);
   transition: transform 250ms $transition-timing-function;
 
   .grid__link:hover &,
@@ -58,13 +58,34 @@
   }
 
   & > p {
-    padding: 63px 24px;
+    @include fonts(400, 14px, 1.56, 0.03em);
 
-    font-size: $font-size-18;
-    line-height: $line-height-156;
-    letter-spacing: 0.03em;
     color: $white-color;
+    
+
+    @media screen and(max-width: 400px){
+      font-size: 14px;
+      padding: 35px 24px;
+    }
+
+    @media screen and(min-width: 401px) {
+      font-size: 16px;
+      padding: 50px 24px;
+    }
+
+    @media screen and(min-width: 540px) {
+      font-size: 18px;
+      padding: 77px 24px;
+    }
+
+    @media screen and(min-width: $tablet) {
+    padding: 60px 24px;
   }
+
+  @media screen and(min-width: $tablet) {
+    padding: 63px 24px;
+  }
+}
 }
 
 .aside {

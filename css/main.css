@@ -1879,7 +1879,6 @@ button {
 
 .grid__box {
   position: relative;
-  overflow: hidden;
   z-index: -1;
 }
 
@@ -1888,8 +1887,6 @@ button {
   bottom: 0;
   right: 0;
   background-color: rgba(33, 150, 243, 0.9);
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1903,11 +1900,44 @@ button {
 }
 
 .grid__text > p {
-  padding: 63px 24px;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 14px;
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: #ffffff;
+}
+
+@media screen and (max-width: 400px) {
+  .grid__text > p {
+    font-size: 14px;
+    padding: 35px 24px;
+  }
+}
+
+@media screen and (min-width: 401px) {
+  .grid__text > p {
+    font-size: 16px;
+    padding: 50px 24px;
+  }
+}
+
+@media screen and (min-width: 540px) {
+  .grid__text > p {
+    font-size: 18px;
+    padding: 77px 24px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .grid__text > p {
+    padding: 60px 24px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .grid__text > p {
+    padding: 63px 24px;
+  }
 }
 
 .aside {
