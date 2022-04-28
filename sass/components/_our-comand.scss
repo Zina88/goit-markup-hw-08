@@ -4,17 +4,13 @@
 
 .comand {
   @media screen and(max-width: 767px){
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+
     }
   
   @media screen and(min-width: $tablet){
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-  }
- 
+   }
 }
 
 .comand__items {
@@ -31,7 +27,6 @@
         margin-bottom: 0;
       }
   }
-
 
   @media screen and(min-width: $tablet) and (max-width: 1199px){
     width: calc((100% - 30px) / 2);

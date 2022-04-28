@@ -1,12 +1,14 @@
 .feature {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .feature__item {
-  width: 450px;
   margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   @media screen and(min-width: $tablet){
     flex-basis: calc((100% - 30px) / 2);
@@ -14,6 +16,7 @@
 
   @media screen and(min-width: $desktop){
   margin-right: 30px;
+  margin-bottom: 0;
   flex-basis: calc((100% - 90px) / 4);
 
     &:last-child {

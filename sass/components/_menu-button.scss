@@ -1,14 +1,9 @@
 .menu-button {
     position: relative;
-    right: 0;
-    z-index: 2;
-    display: inline-flex;
-    margin: 0;
-    padding: 0;
-    border: none;
+    z-index: 99;
+    border: transparent;
+    outline: transparent;
     background-color: transparent;
-    margin-left: auto;
-    margin-right: 15px;
     
     transition: fill 250ms $transition-timing-function;
 
@@ -17,31 +12,18 @@
     }
 
     & .mobile-menu__open {
-        // display:  none;
-        opacity: 0;
-        transform: scale(0.3) rotate(90deg) translateY(100%);
+        opacity: 1;
     }
 
     &.is-open .mobile-menu__open {
-        // display: block;
-        opacity: 1;
-        transform: scale(1) rotate(0) translateY(0);
-        transform-origin: center;
-        transition: opacity 400ms ease,
-        transform 400ms ease;
+        opacity: 0;
     }
 
     & .mobile-menu__close{
-        opacity: 1;
-        transform: scale(1) rotate(0) translateY(0);
+        opacity: 0;
     }
     &.is-open .mobile-menu__close {
-        // display: none;
-        opacity: 0;
-        transform: scale(0.3) rotate(0);
-        transform-origin: center;
-        transition: opacity 400ms ease 300ms,
-        transform 400ms ease 300ms;
+        opacity: 1;
     }
 
     @media screen and(max-width: 767px) {

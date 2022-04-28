@@ -3,7 +3,6 @@ body {
   color: $primary-text-color;
   font-family: $font-family-primary;
   font-weight: 400;
-  margin: 0 auto;
 }
 
 h1,
@@ -35,29 +34,32 @@ button {
 }
 
 .container {
-    padding: 0 15px;
-    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 
-    // @media screen and(max-width: 767px){
-    //   max-width: 480px;
-    //  }
-     
-
-    @media screen and (min-width: $tablet) {
-      max-width: $tablet;
+    @media screen and(min-width: 480px){
+      width: $mobile;
+     }
+    
+    @media screen and (min-width: 768px) {
+      width: $tablet;
     }
     
-    @media screen and (min-width: $desktop) {
-      max-width: $desktop;
+    @media screen and (min-width: 1200px) {
+      width: $desktop;
     }
 }
 
 .section {
-  padding: 60px 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
   
   @media screen and(min-width: $desktop){
-  padding: 94px 0;
-}
+  padding-top: 94px;
+  padding-bottom: 94px;
+  }
 }
 
 .visually-hidden {

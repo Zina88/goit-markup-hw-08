@@ -1,6 +1,7 @@
 .menu-social {
     @media screen and(max-width:767px) {
         display: inline-flex;
+        justify-content: center;
     }
 
     @media screen and(min-width: $tablet) {

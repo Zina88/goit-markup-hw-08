@@ -22,21 +22,28 @@
     <!--шапка-->
     <header class="page-header">
       <div class="page-header__container container">
-        <a class="logo" href=""><span class="logo__icon">Web</span>Studio</a>
+        <div class="page-header__nav">
+          <a class="logo" href=""><span class="logo__icon">Web</span>Studio</a>
 
-        <!--мобильное меню-->
-        <button
-          class="menu-button is-open"
-          aria-expanded="false"
-          aria-controls="menu-container"
-          data-menu-button
-          type="button"
-        >
-          <svg class="mobile-menu" width="40" height="40" aria-label="Переключательмобильного меню">
-            <use class="mobile-menu__open" href="./images/icon.svg#icon-menu"></use>
-            <use class="mobile-menu__close" href="./images/icon.svg#icon-close"></use>
-          </svg>
-        </button>
+          <!--мобильное меню-->
+          <button
+            class="menu-button"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+            type="button"
+          >
+            <svg
+              class="mobile-menu"
+              width="40"
+              height="40"
+              aria-label="Переключательмобильного меню"
+            >
+              <use class="mobile-menu__open" href="./images/icon.svg#icon-menu"></use>
+              <use class="mobile-menu__close" href="./images/icon.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
 
         <nav class="nav">
           <div class="menu-container" id="menu-container" data-menu>
@@ -341,7 +348,7 @@
                 />
 
                 <img
-                  src="./images/tablet-comand/tablet-dem'yanenko.jpg"
+                  src="./images/mobile-comand/mobile-dem'yanenko.jpg"
                   alt="Demianenko"
                   width="450"
                   height="460"
@@ -441,7 +448,7 @@
                   type="image/jpg"
                 />
                 <img
-                  src="./images/tablet-comand/tablet-repina.jpg"
+                  src="./images/mobile-comand/mobile-repina.jpg"
                   alt="Repina"
                   width="450"
                   height="460"
@@ -542,7 +549,7 @@
                 />
 
                 <img
-                  src="./images/tablet-comand/tablet-tarasov.jpg"
+                  src="./images/mobile-comand/mobile-tarasov.jpg"
                   alt="Tarasov"
                   width="450"
                   height="460"
@@ -630,7 +637,7 @@
                     ./images/mobile-comand/mobile-ermakov.webp    1x,
                     ./images/mobile-comand/mobile-ermakov@2x.webp 2x
                   "
-                  media="(ax-width: 767px)"
+                  media="(max-width: 767px)"
                   type="image/webp"
                 />
                 <source
