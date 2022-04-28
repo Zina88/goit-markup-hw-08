@@ -1,42 +1,40 @@
 .grid {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
 }
 
 .grid__item {
-  &:not(:last-child){
-      margin-bottom: 30px;
-  }
+  margin-left: 30px;
+  margin-top: 30px;
 
   @media screen and(min-width: $tablet) and(max-width: 1199px) {
-    width: calc((100% - 30px) / 2);
-    margin-right: 30px;
-
-    &:nth-child(even) {
-      margin-right: 0;
+    width: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
     }
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
+  
 
   @media screen and(min-width: 1200px){
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
+    width: calc(100% / 3 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
 
-    &:nth-child(3n) {
-      margin-right: 0;
-    }
+    // &:nth-child(3n) {
+    //   margin-right: 0;
+    // }
 
-    &:nth-last-child(-n + 3) {
-      margin-bottom: 0;
-    }
-  }
+    // &:nth-last-child(-n + 3) {
+    //   margin-bottom: 0;
+    // }
+ }
 }
 
 .grid__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   transition: box-shadow 250ms $transition-timing-function;
 
@@ -49,7 +47,7 @@
 
 .grid__box {
   position: relative;
-  @extend %width;
+  // @extend %width;
   overflow: hidden;
   z-index: -1;
 }
@@ -58,7 +56,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  @extend %width;
+  // @extend %width;
   background-color: rgba(33, 150, 243, 0.9);
 
   transform: translateY(100%);
@@ -101,17 +99,13 @@
 }
 
 .aside {
+  flex-grow: 1;
   padding: 20px 24px;
   border-left: 1px solid $border-color;
   border-right: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
 }
 
-.aside--padding {
-  @media screen and(min-width: 768px) and(max-width: 1199px) {
-    padding-bottom: 55px;
-  }
-}
 
 .aside__title {
   margin-bottom: 4px;

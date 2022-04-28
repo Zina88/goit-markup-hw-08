@@ -12,10 +12,11 @@
 .page-footer--bgc {
   text-align: center;
 
+
   @media screen and(min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
   }
 }
 
@@ -26,8 +27,6 @@
    
 
   @media screen and(min-width: $tablet) and(max-width: 1199px){
-    margin-right: 165px;
-    margin-bottom: 50px;
   }
 
   @media screen and(min-width: $desktop){
@@ -85,7 +84,10 @@
 }
 
 .accede {
-  margin-bottom: 60px;
+  @media  screen and(max-width: 767px) {
+    margin-bottom: 60px; 
+  }
+ 
 
   @media screen and(min-width: $desktop){
   margin-right: 93px;
@@ -135,6 +137,13 @@
 
 .social__logo {
   fill: currentColor;
+}
+
+
+.subscribe{
+  @media screen and(min-width: 768px) and(max-width: 1199px){
+    margin-top: 60px;
+  }
 }
 
 .subscribe__title {
