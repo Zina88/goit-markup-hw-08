@@ -15,8 +15,8 @@
 
     @media screen and(max-width: 767px) {   
         justify-content: space-between;
-        // position: fixed;
-        position: absolute;
+        position: fixed;
+        // position: absolute;
         top: 0;
         left: 0;
         width: 100vw;
@@ -33,7 +33,7 @@
         opacity 250ms $transition-timing-function, visibility 250ms $transition-timing-function;
 
         &.is-open {
-            // position: absolute;
+            position: absolute;
             opacity: 1;
             transform: translateX(0);
             visibility: visible;
